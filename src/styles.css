@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.4em;
+}
+footer{
+    margin-top: 100%;
+    background-color: #b98e72;
+}
+
+.close-nav{
+    display: none;
+}
+
+.button-menu{
+    display: none;
+}
+
+.logo-bienvenida-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #b98e72;
+    box-shadow: 3px 3px 5px #00000048;
+    flex-wrap: wrap;
+}
+
+header a{
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li{
+    display: inline-block;
+}
+
+nav a{
+    display: block;
+    padding: 0.5em 1rem;
+    color: #f5f5f5;
+}
+
+nav a:hover{
+    background-color: #43d59393;
+}
+
+@media(width < 500px){
+    .drop-list-menu{
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 250px;
+        z-index: 999;
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        background-color: rgba(255, 255, 255, 0);
+        box-shadow: -10px 0 10px #c0e3ee3e;
+        display: flex;
+        flex-direction: column;
+    }
+    .close-nav{
+    display: block;
+    }
+    
+    .list-navigator{
+        display: none;
+        height: 0;
+        width: 0;
+    }
+    
+    .list-navigator li a{
+        color: black;
+    }
+
+    .logo-bienvenida-nav > .button-menu{
+    display: flex;
+    cursor: pointer;
+    padding: 1.2em;
+    background-color: rgba(68, 238, 142, 0.499);
+    margin-left: auto;
+    }
+
+}
