@@ -1,40 +1,51 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     min-height: 100vh;
     font-family: 'Times New Roman', Times, serif;
 }
 
-footer{
+footer {
     margin-top: 100%;
     background-color: #b98e72;
 }
 
-.button-menu{
+
+.button-menu {
     display: none;
 }
 
-.logo-bienvenida-nav{
+.logo-bienvenida-nav {
+    display: grid;
     padding-top: 2rem;
     padding-bottom: 1rem;
     padding-left: 0.4em;
     padding-right: 0.4em;
-    display: flex;
-    justify-content: space-between;
+    grid-template-columns: 200px 300px;
+    justify-content: space-around;
     align-items: center;
     background-color: #b98e72;
     box-shadow: 3px 3px 5px #00000048;
 }
 
-header a{
+.bienvenido{
+    font-size: 4rem;
+    width: 0;
+    text-shadow: 1px 4px 7px;
+    color: bisque;
+    letter-spacing: 4px;
+}
+
+
+header a {
     text-decoration: none;
     color: black;
 }
 
-nav{
+nav {
     position: relative;
     display: flex;
     height: 70px;
@@ -42,14 +53,14 @@ nav{
     border-radius: 0.6em;
 }
 
-nav .list-navigator{
+nav .list-navigator {
     display: flex;
     width: 350px;
     justify-content: center;
     align-items: center;
 }
 
-nav .list-navigator li{
+nav .list-navigator li {
     position: relative;
     list-style: none;
     width: 70px;
@@ -57,7 +68,7 @@ nav .list-navigator li{
     z-index: 1;
 }
 
-nav .list-navigator li a{
+nav .list-navigator li a {
     position: relative;
     display: flex;
     justify-content: center;
@@ -68,88 +79,96 @@ nav .list-navigator li a{
     font-weight: 500;
 }
 
-nav .list-navigator li a .icon{
+nav .list-navigator li a .icon {
     position: relative;
     display: block;
     line-height: 75px;
     font-size: 1.5em;
     text-align: center;
     transition: 0.5s;
-    color: aqua;
+    color: #69dcae;
 }
 
-nav .list-navigator li.active a .icon{
+nav .list-navigator li.active a .icon {
     transform: translateY(-32px);
 }
 
-nav .list-navigator li a .text{
+nav .list-navigator li a .text {
     position: absolute;
-    color: rgb(4, 0, 255);
-    font-weight: 400;
-    font-size: 0.75em;
-    letter-spacing: 0.05em;
+    text-shadow: 2px 3px 5px;
+    color: #b98e72;
+    /* font-weight: 400; */
+    font-size: 1em;
+    letter-spacing: 0.2em;
     transition: 0.5s;
     opacity: 0;
     transform: translateY(20px);
 }
 
-nav .list-navigator li.active a .text{
+nav .list-navigator li.active a .text {
     opacity: 1;
     transform: translateY(10px);
 }
 
-nav .list-navigator .close-nav{
+nav .list-navigator .close-nav {
     opacity: 0;
     width: 0;
     height: 0;
 }
 
-.indicator{
+.indicator {
     position: absolute;
     top: -50%;
     border-radius: 50%;
-    border: 6px solid rgba(113, 65, 65, 0.363);
-    width: 60px;
-    height: 60px;
-    background:rgb(68, 238, 142) ;
+    border: 0px solid;
+    width: 70px;
+    height: 70px;
+    background: #b98e72;
     transition: 0.5s;
 }
 
-nav .list-navigator li:nth-child(2).active ~ .indicator{
-    transform: translateX(calc(70px * -1));
+nav .list-navigator li:nth-child(2).active~.indicator {
+    transform: translateX(calc(71px * -1));
 }
-nav .list-navigator li:nth-child(3).active ~ .indicator{
-    transform: translateX(calc(70px * 0));
+
+nav .list-navigator li:nth-child(3).active~.indicator {
+    transform: translateX(calc(0px * 0));
 }
-nav .list-navigator li:nth-child(4).active ~ .indicator{
-    transform: translateX(calc(70px * 1));
+
+nav .list-navigator li:nth-child(4).active~.indicator {
+    transform: translateX(calc(69px * 1));
 }
 
 
-@media(width < 765px){
-    .drop-list-menu{
+@media(width < 376px) {
+    .logo-bienvenida-nav{
+        display: block;
+        text-align: center;
+    }
+    .list-desplegable {
+        display: grid;
+        grid-template-rows: 50px 50px 50px;
         position: fixed;
         top: 0;
         right: 0;
         height: 100vh;
-        width: 250px;
+        width: 200px;
         z-index: 999;
+        padding: 1rem 0 1rem 2rem;
         -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(10px);
-        background-color: rgba(255, 255, 255, 0);
         box-shadow: -10px 0 10px #c0e3ee3e;
-        display: flex;
-        flex-direction: column;
+        list-style: none;
     }
 
-    .logo-bienvenida-nav > .button-menu{
-    display: flex;
-    cursor: pointer;
-    padding: 1.2em;
-    background-color: rgba(68, 238, 142, 0.499);
-    margin-left: auto;
-    height: 32px;
-    align-items: center;
+    .button-menu {
+        display: inline-block;
+        cursor: pointer;
+        padding: 2em;
+        background-color: #19a6d0c9;
+        margin-left: auto;
+        align-items: center;
+        border-radius: 1rem;
     }
 
 }
