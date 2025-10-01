@@ -145,6 +145,11 @@ nav .list-navigator li:nth-child(4).active~.indicator {
         display: block;
         text-align: center;
     }
+
+    .noDesplegable{
+        display: none;
+    }
+
     .list-desplegable {
         display: grid;
         grid-template-rows: 50px 50px 50px;
