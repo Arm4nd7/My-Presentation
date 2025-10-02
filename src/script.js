@@ -1,6 +1,6 @@
 let menuBtn = document.querySelector('.button-menu');
 let closeMenu = document.querySelector('.close-nav');
-let nav = document.querySelector("nav");
+let fondoBlanco = document.querySelector(".logo-bienvenida-nav");
 let menu = document.querySelector("ul");
 let desplegable = document.querySelector(".lista-menu-desplegable");
 let noDesplegable = document.querySelector(".noDesplegable");
@@ -15,18 +15,24 @@ list.forEach((item) =>
     item.addEventListener('click', activeLink));
 
 menuBtn.addEventListener("click", () => {
-    menu.classList.add("list-desplegable");
-    menu.classList.toggle("list-navigator"); 
-    desplegable.style.display = "block";
-    // noDesplegable.style.display = "none";
-    // menuBtn.style.display = "none";
+    if (menu.classList.toggle("list-navigator")) {
+        closeMenu.className = "button-menu";
+        menu.classList.add("list-desplegable");
+    }
+    desplegable.style.display = "grid";
+    menuBtn.style.display = "none";
+    fondoBlanco.style.display = "none";
 });
 
 // cerrar menú
 closeMenu.addEventListener("click", () => {
     desplegable.style.display = "none";
-    noDesplegable.style.display = "block";
     menuBtn.style.display = "block";
-    // menu.classList.remove("list-desplegable", "list-navigator");
+    menu.classList.toggle("list-navigator")
+    menu.classList.remove("list-desplegable");
+    fondoBlanco.style.display = "grid";
+
+    // nav.style.display = "none";
+
 });
 
