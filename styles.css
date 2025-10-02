@@ -8,10 +8,7 @@ body {
     font-family: 'Times New Roman', Times, serif;
 }
 
-footer {
-    margin-top: 100%;
-    background-color: #b98e72;
-}
+
 
 
 .button-menu {
@@ -31,12 +28,22 @@ footer {
     box-shadow: 3px 3px 5px #00000048;
 }
 
-.bienvenido{
+.bienvenido {
     font-size: 4rem;
     width: 0;
     text-shadow: 1px 4px 7px;
     color: bisque;
     letter-spacing: 4px;
+}
+
+footer {
+    margin-top: 100%;
+    font-size: 20px;
+    text-shadow: 1px 4px 7px;
+    letter-spacing: 2px;
+    text-align: center;
+    background-color: #b98e72;
+    color: bisque;
 }
 
 
@@ -141,12 +148,12 @@ nav .list-navigator li:nth-child(4).active~.indicator {
 
 
 @media(width < 376px) {
-    .logo-bienvenida-nav{
+    /* .logo-bienvenida-nav {
         display: block;
         text-align: center;
-    }
+    } */
 
-    .noDesplegable{
+    .noDesplegable {
         display: none;
     }
 
@@ -162,18 +169,18 @@ nav .list-navigator li:nth-child(4).active~.indicator {
         padding: 1rem 0 1rem 2rem;
         -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(10px);
-        box-shadow: -10px 0 10px #c0e3ee3e;
         list-style: none;
+        box-shadow: -10px 0 10px #c0e3ee3e;
     }
 
     .button-menu {
-        display: inline-block;
+        display: block;
         cursor: pointer;
         padding: 2em;
-        background-color: #19a6d0c9;
-        margin-left: auto;
-        align-items: center;
+        width: 30px;
+        text-align: center;
         border-radius: 1rem;
+        background-color: #19a6d0c9;
     }
 
 }
