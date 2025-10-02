@@ -21,7 +21,7 @@ menuBtn.addEventListener("click", () => {
     }
     desplegable.style.display = "grid";
     menuBtn.style.display = "none";
-    fondoBlanco.style.display = "none";
+
 });
 
 // cerrar menú
@@ -30,9 +30,6 @@ closeMenu.addEventListener("click", () => {
     menuBtn.style.display = "block";
     menu.classList.toggle("list-navigator")
     menu.classList.remove("list-desplegable");
-    fondoBlanco.style.display = "grid";
-
-    // nav.style.display = "none";
-
+    // fondoBlanco.style.display = "flex";
 });
 

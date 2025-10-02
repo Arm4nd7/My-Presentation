@@ -4,12 +4,10 @@
 }
 
 body {
+    min-width: auto;
     min-height: 100vh;
     font-family: 'Times New Roman', Times, serif;
 }
-
-
-
 
 .button-menu {
     display: none;
@@ -30,7 +28,6 @@ body {
 
 .bienvenido {
     font-size: 4rem;
-    width: 0;
     text-shadow: 1px 4px 7px;
     color: bisque;
     letter-spacing: 4px;
@@ -104,7 +101,6 @@ nav .list-navigator li a .text {
     position: absolute;
     text-shadow: 2px 3px 5px;
     color: #b98e72;
-    /* font-weight: 400; */
     font-size: 1em;
     letter-spacing: 0.2em;
     transition: 0.5s;
@@ -147,11 +143,11 @@ nav .list-navigator li:nth-child(4).active~.indicator {
 }
 
 
-@media(width < 376px) {
-    /* .logo-bienvenida-nav {
+@media(max-width: 375px){
+    .logo-bienvenida-nav {
         display: block;
         text-align: center;
-    } */
+    }
 
     .noDesplegable {
         display: none;
@@ -184,3 +180,31 @@ nav .list-navigator li:nth-child(4).active~.indicator {
     }
 
 }
+@media (min-width: 600px) {
+    body {
+        padding: 15px;
+    }
+    /* Puedes cambiar aquí el display de elementos que estaban apilados */
+}
+
+@media (min-width: 768px) {
+    .contenedor {
+        max-width: 740px; /* Limita el ancho del contenido principal */
+        margin: 0 auto;
+    }
+    /* Aquí es común pasar de un menú hamburguesa a un menú de navegación completo */
+}
+
+@media (min-width: 1024px) {
+    .contenedor {
+        max-width: 980px;
+    }
+    /* Aquí puedes introducir diseños de múltiples columnas (grid/flex) */
+}
+
+@media (min-width: 1200px) {
+    .contenedor {
+        max-width: 1140px; /* Ancho máximo para pantallas muy grandes */
+    }
+}
+
