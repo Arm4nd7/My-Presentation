@@ -45,7 +45,6 @@ main{
     justify-content: center;
     text-align: center;
     align-items: center;
-    padding: 0px;
     grid-template-areas:
         "   container1     container2     container3   ";
     ;
