@@ -58,6 +58,8 @@ main {
 .container-gird .item:hover {
     filter: brightness(1);
     transform: translateZ(200px);
+    border: solid 1px white;
+
 }
 
 .container-gird .item:hover+* {
@@ -160,10 +162,13 @@ img {
     .container-gird .item {
         filter: brightness(1);
         transform: translateZ(0px) rotateY(0deg);
+
     }
 
     .container-gird .item:hover {
         transform: translateZ(0px) rotateY(0deg);
+        border: solid 1px white;
+
     }
 
     .container-gird .item:hover+* {
@@ -204,6 +209,8 @@ img {
 
     .container-gird .item:hover {
         transform: translateZ(0px) rotateY(0deg);
+        border: solid 1px white;
+
     }
 
     .container-gird .item:hover+* {
