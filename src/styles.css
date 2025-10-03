@@ -4,15 +4,142 @@
     box-sizing: border-box;
 }
 
-header{
-    position: relative; 
-}
-
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     font-family: 'Times New Roman', Times, serif;
+    background-color: cadetblue;
 }
 
+.title-welcome {
+    font-size: 2rem;
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+}
 
+footer {
+    background: yellow;
+    text-align: center;
+    margin-top: auto;
+    width: auto;
+}
+
+main{
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.container-gird {
+    display: grid;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    margin-top:  2rem;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 0px;
+    grid-template-areas:
+        "   container1     container2     container3   ";
+    ;
+}
+
+.container-gird .item {
+    transition: 0.5s;
+    filter: brightness(0.1);
+    cursor: pointer;
+}
+
+.container-gird .item:hover {
+    filter: brightness(1);
+    transform: translateZ(50px);
+}
+
+.container-gird .item:hover+* {
+    filter: brightness(0.3);
+    transform: translateZ(150px) rotateY(40deg);
+}
+
+.container-gird .item:hover+*+* {
+    filter: brightness(0.2);
+    transform: translateZ(70px) rotateY(20deg);
+}
+
+.container-gird .item:hover+*+*+* {
+    filter: brightness(0.1);
+    transform: translateZ(30px) rotateY(10deg);
+}
+
+.container-gird .item:has(+ * :hover) {
+    filter: brightness(0.3);
+    transform: translateZ(150px) rotateY(-40deg);
+}
+
+.container-gird .item:has(+ * + *:hover) {
+    filter: brightness(0.2);
+    transform: translateZ(70px) rotateY(-20deg);
+}
+
+.container-gird .item:has(+ * + * + *:hover) {
+    filter: brightness(0.1);
+    transform: translateZ(30px) rotateY(-10deg);
+}
+
+.title-proyect {
+    grid-area: titleProyect;
+    background-color: aqua;
+}
+
+img {
+    width: 80%;
+}
+
+.item .container-1 {
+    grid-area: container1;
+}
+
+.item .container-2 {
+    grid-area: container2;
+}
+
+.item .container-3 {
+    grid-area: container3;
+}
+
+.menu {
+    display: none;
+    justify-content: flex-end;
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.menu ul li {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+}
+
+.button-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    padding: 1rem;
+}
